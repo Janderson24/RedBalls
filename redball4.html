@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> 
+            </script>
+         
+         <style>
+            
+             #redball{
+                 position:absolute;
+             }
+             
+         </style>
+            
+         <script>
+            
+            function pfadeOut(){
+                var myparagraph=$("#gt");
+                myparagraph.fadeOut();
+            }
+            
+            function pfadeIn(){
+                var myparagraph=$("#gt");
+                myparagraph.fadeIn();
+            }
+            
+              function Sayhello() {
+               alert('Hi there')
+           }
+           
+           function moveright() {
+               var ball=$("#redball");
+               ball.animate({"left":"+=100"},1000,"linear");
+           
+           }
+           
+           function moveleft() {
+               var ball=$("#redball");
+               ball.animate({"left":"-=100"},1000,"linear");
+           }
+           
+           function moveup() {
+               var ball=$("#redball");
+               ball.animate({"top":"-=100"},1000,"linear");
+           }
+           
+           function movedown() {
+               var ball=$("#redball");
+               ball.animate({"top":"+=100"},1000,"linear");
+           }
+           
+           function movedownright() {
+               if(redball.left >= 0){
+                   redball.left=redball.left - 18;
+               }
+               var ball=$("#redball");
+               ball.animate({"top":"+=100", "left":"+=100"},1000,"linear");
+           }
+           
+            function movedownleft() {
+               var ball=$("#redball");
+               ball.animate({"top":"+=100", "left":"-=100"},1000,"linear");
+           }
+           
+           function moveupright() {
+               var ball=$("#redball");
+               ball.animate({"top":"-=100", "left":"+=100"},1000,"linear");
+           }
+          
+           function moveupleft() {
+               var ball=$("#redball");
+               ball.animate({"top":"-=100", "left":"-=100"},1000,"linear");
+           }
+           
+           function movesquare() {
+               var ball=$("#redball");
+               ball.animate({"left":"+=100"},1000,"linear");
+               ball.animate({"top":"+=100"},1000,"linear");
+               ball.animate({"left":"-=100"},1000,"linear");
+               ball.animate({"top":"-=100"},1000,"linear");
+           }
+    
+           
+           function movetriangle() {
+               var ball=$("#redball");
+               ball.animate({"top":"-=100", "left":"+=100"},1000,"linear");
+               ball.animate({"top":"+=100", "left":"+=100"},1000,"linear");
+               ball.animate({"left":"-=100"},1000,"linear");
+           }
+           
+           function movehex() {
+              var ball=$("#redball");
+              ball.animate({"left":"+=100"},1000,"linear");
+              ball.animate({"top":"+=100", "left":"+=100"},1000,"linear");
+              ball.animate({"top":"+=100", "left":"-=100"},1000,"linear");
+              ball.animate({"left":"-=100"},1000,"linear");
+              ball.animate({"top":"-=100", "left":"-=100"},1000,"linear");
+              ball.animate({"top":"-=100", "left":"+=100"},1000,"linear");
+              ball.animate({"left":"+=100"},1000,"linear");
+     
+           }
+           
+           function moveoct() {
+              var ball=$("#redball");
+              ball.animate({"left":"+=100"},1000,"linear");
+              ball.animate({"top":"+=100", "left":"+=100"},1000,"linear");
+              ball.animate({"top":"+=100"},1000,"linear");
+              ball.animate({"top":"+=100", "left":"-=100"},1000,"linear");
+              ball.animate({"left":"-=100"},1000,"linear");
+              ball.animate({"top":"-=100", "left":"-=100"},1000,"linear");
+              ball.animate({"top":"-=100", "left":"+=100"},1000,"linear");
+              ball.animate({"left":"+=100"},1000,"linear");
+     
+             }
+             
+            
+            
+                     
+        </script>    
+        
+    </head>
+    
+    <body class="boundaries">
+                
+        <p id="gt">My first Paragraph</p>
+                
+        <p>My Second Paragraph</p>
+            
+            
+        <button onclick="pfadeOut()">Fade Out</button>
+                
+        <button onclick="pfadeIn()">Fade In</button>
+                
+        <button onclick="Sayhello()">Hello World!</button>
+            
+        <button onclick="moveright()">Move Right</button>
+            
+        <button onclick="moveleft()">Move Left</button>
+            
+        <button onclick="moveup()">Move Up</button>
+            
+        <button onclick="moveupright()">Up Right</button>
+            
+        <button onclick="moveupleft()">Up Left</button>
+            
+        <button onclick="movedown()">Move Down</button>
+            
+        <button onclick="movedownright()">Down Right</button>
+            
+        <button onclick="movedownleft()">Down Left</button>
+            
+        <button onclick="movesquare()">Square</button>
+            
+        <button onclick="movetriangle()">Triangle</button>
+            
+        <button onclick="movehex()">Hexagon</button>
+        
+        <button onclick="moveoct()">Octagon</button>
+        
+        
+        
+        <img id="redball" src="http://storage.googleapis.com/ics-redball/redball.jpg"></img>  
+        
+            </body>
+</html>
+

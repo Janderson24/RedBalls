@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+     
+       <script type="text/javascript">
+           
+           
+           
+           function Sayhello() {
+               alert('Hi there')
+           }
+           
+           function moveright() {
+                if(redball.left <= window.innerWidth){
+                    redball.left= redball.left +30;
+               }
+           }
+           
+           function moveleft() {
+                if(redball.left >= 0){
+                   redball.left=redball.left -18;
+               }
+           }
+           
+           function moveup() {
+               if(redball.top >= 0){
+               redball.top= redball.top -15;
+            }
+           }
+           
+           function movedown() {
+               redball.top= redball.top +1;
+           }
+           
+           function movedownright() {
+               redball.top =redball.top +1;
+               redball.left = redball.left +1;
+           }
+           
+            function movedownleft() {
+               redball.top =redball.top +1;
+               redball.left = redball.left -1;
+           }
+           
+           function moveupright() {
+               redball.left = redball.left +1;
+               redball.top =redball.top -1;
+           }
+          
+           function moveupleft() {
+               redball.left = redball.left -1;
+               redball.top =redball.top -1;
+           }
+           
+           function movesquare() {
+               var i;
+               for(i=0; i<80; i++){
+                    moveright();
+               }
+               for(i=0; i<80; i++){ 
+                    movedown();
+               }
+               for(i=0; i<80; i++){
+                    moveleft();
+               }
+               for(i=0; i<80; i++){
+                    moveup();
+               }
+           }
+           
+           function movetriangle() {
+               var i;
+               for(i=0; i<80; i++){
+                moveupright();
+               }
+               for(i=0; i<80; i++){
+                movedownright();
+               }
+               for(i=0; i<80; i++){
+                moveleft();
+               }
+           }
+           
+           function movehex() {
+              var i;
+              for(i=0; i<80; i++){
+                moveright();
+              }
+              for(i=0; i<80; i++){
+                movedownright();
+              }
+              for(i=0; i<80; i++){
+                movedownleft();
+              }
+              for(i=0; i<80; i++){
+                moveleft();
+              }
+              for(i=0; i<80; i++){
+                moveupleft();
+              }
+              for(i=0; i<80; i++){
+                moveupright();
+              }
+              for(i=0; i<80; i++){
+                moveright();
+              }
+           }
+           
+          // function movealert() {
+            //   if (redball.left < 500){
+              // alert('No!')
+           //}
+              
+              // else {
+                  // redball.left +100
+               //}
+            // }
+       </script>
+       
+       
+    </head>
+    
+    <body>
+        
+            <button onclick="pfadeOut()">Fade Out</button>
+                
+            <button onclick="pfadeIn()">Fade In</button>
+            
+            <script type="text/javascript" src="https://storage.googleapis.com/ics-redball/redball.js"></script>
+       
+            <button onclick="Sayhello()">Hello World</button>
+            
+            <button onclick="moveright()">Move Right</button>
+            
+            <button onclick="moveleft()">Move Left</button>
+            
+            <button onclick="moveup()">Move Up</button>
+            
+            <button onclick="moveupright()">Up Right</button>
+            
+            <button onclick="moveupleft()">Up Left</button>
+            
+            <button onclick="movedown()">Move Down</button>
+            
+            <button onclick="movedownright()">Down Right</button>
+            
+            <button onclick="movedownleft()">Down Left</button>
+            
+            <button onclick="movesquare()">Square</button>
+            
+            <button onclick="movetriangle()">Triangle</button>
+            
+            <button onclick="movehex()">Hexagon</button>
+            
+            <button onclick="movealert()">Stop</button>
+            
+            <img id="redball" src="http://storage.googleapis.com/ics-redball/redball.jpg"/>
+   
+            
+   
+    </body>
+    
+</html>
